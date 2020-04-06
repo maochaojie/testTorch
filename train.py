@@ -2,6 +2,7 @@ import numpy as np
 from torch import nn
 from torch_data import vecDataList
 import torch
+import sys
 
 class LR(nn.Module):
     def __init__(self, input_size):
