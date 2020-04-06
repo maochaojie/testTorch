@@ -29,7 +29,7 @@ class LSTMLR(nn.Module):
         # out = self.relu(out)
         out = self.fc2(ls[-1, :, :])
         return out
-
+###
 class MSE(nn.Module):
     def __init__(self):
         super(MSE, self).__init__()
