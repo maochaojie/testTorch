@@ -3,6 +3,8 @@ import matplotlib.pylab as plt
 
 def sample_index(recall, precision, sample_num = 100):
     index_list = np.argsort(np.array(recall))
+    if len(index_list) < sample_num:
+        return recall, precision
     recall = recall[::len(index_list)//sample_num]
     precision = precision[::len(index_list)//sample_num]
     return recall, precision
